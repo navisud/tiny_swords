@@ -6,7 +6,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="WarriorBlue" type="Sprite2D" parent="."]
-position = Vector2(3100, 148)
+position = Vector2(1930, 284)
 texture = ExtResource("1_eudfi")
 
 [node name="Label" type="Label" parent="WarriorBlue"]
@@ -31,7 +31,7 @@ offset_top = -338.0
 offset_right = 782.0
 offset_bottom = -315.0
 scale = Vector2(2.18443, 2.16058)
-text = "attack_side1"
+text = "attack_side_down "
 
 [node name="Label4" type="Label" parent="WarriorBlue"]
 offset_left = 681.0
@@ -39,7 +39,7 @@ offset_top = -136.0
 offset_right = 777.0
 offset_bottom = -113.0
 scale = Vector2(2.18443, 2.16058)
-text = "attack_side2"
+text = "attack_side_up"
 
 [node name="Label5" type="Label" parent="WarriorBlue"]
 offset_left = 689.0
