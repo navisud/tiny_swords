@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var sprite_player = $Sprite_Player
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 
+@export var sword_damage : int = 2
 @export var speed : float = 3
 @export_range(0,1) var smooth : float = 0.3 
 
@@ -19,6 +20,8 @@ func _process(delta: float) -> void:
 	read_input()
 	play_run_idle()
 	flip_sprite()
+	
+	GameManager.player_position = position
 
 func _physics_process(delta: float) -> void:
 # modify player speed

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bj50xceya2n87"]
+[gd_scene load_steps=4 format=3 uid="uid://bj50xceya2n87"]
 
 [ext_resource type="Texture2D" uid="uid://b4rcjf8qtc2bi" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_eudfi"]
 [ext_resource type="PackedScene" uid="uid://db2ocnrv60lcq" path="res://player/player.tscn" id="2_yslcq"]
+[ext_resource type="PackedScene" uid="uid://b204qcrp0pta5" path="res://enemy/enemy.tscn" id="3_8md34"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -101,3 +102,18 @@ horizontal_alignment = 1
 vertical_alignment = 3
 
 [node name="Player" parent="." instance=ExtResource("2_yslcq")]
+
+[node name="enemy_pawn" parent="." instance=ExtResource("3_8md34")]
+position = Vector2(354, 316)
+
+[node name="enemy_pawn2" parent="." instance=ExtResource("3_8md34")]
+position = Vector2(435, 482)
+
+[node name="enemy_pawn3" parent="." instance=ExtResource("3_8md34")]
+position = Vector2(787, 467)
+
+[node name="enemy_pawn4" parent="." instance=ExtResource("3_8md34")]
+position = Vector2(825, 272)
+
+[node name="enemy_pawn5" parent="." instance=ExtResource("3_8md34")]
+position = Vector2(454, 147)

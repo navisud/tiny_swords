@@ -62,7 +62,6 @@
 [ext_resource type="Texture2D" uid="uid://bnqymshklhwab" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Archer + Bow/Archer_Yellow_(NoArms).png" id="60_s3xyc"]
 [ext_resource type="Texture2D" uid="uid://ljoglk22g4px" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Blue/Archer_Blue.png" id="61_ttw70"]
 [ext_resource type="Texture2D" uid="uid://dpr8lvvpdf20q" path="res://addons/Tiny Swords/Factions/Knights/Troops/Dead/Dead.png" id="62_0lt7v"]
-[ext_resource type="Texture2D" uid="uid://deqikhakm7xwp" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="63_ck84n"]
 [ext_resource type="Texture2D" uid="uid://bhubwt6i7tdao" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="64_iv4jj"]
 [ext_resource type="Texture2D" uid="uid://dfdno6n4nkjb1" path="res://addons/Tiny Swords/Resources/Gold Mine/GoldMine_Active.png" id="65_kmctk"]
 [ext_resource type="Texture2D" uid="uid://udrwkq532r4c" path="res://addons/Tiny Swords/Resources/Gold Mine/GoldMine_Destroyed.png" id="66_e6a55"]
@@ -82,6 +81,7 @@
 [ext_resource type="Texture2D" uid="uid://sed6rxrti3k2" path="res://addons/Tiny Swords/Terrain/Water/Rocks/Rocks_04.png" id="80_5qty8"]
 [ext_resource type="Texture2D" uid="uid://cfx5kcnpct5ir" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="81_g4oxp"]
 [ext_resource type="Texture2D" uid="uid://b4rcjf8qtc2bi" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="82_7ng4k"]
+[ext_resource type="Texture2D" uid="uid://bx7gkheqhdt1r" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="82_m7ctk"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -334,10 +334,6 @@ texture = ExtResource("61_ttw70")
 position = Vector2(5554, 244)
 texture = ExtResource("62_0lt7v")
 
-[node name="PawnBlue" type="Sprite2D" parent="."]
-position = Vector2(5549, 1054)
-texture = ExtResource("63_ck84n")
-
 [node name="WarriorRed" type="Sprite2D" parent="."]
 position = Vector2(6847, 901)
 texture = ExtResource("64_iv4jj")
@@ -413,3 +409,7 @@ texture = ExtResource("81_g4oxp")
 [node name="WarriorBlue" type="Sprite2D" parent="."]
 position = Vector2(9182, 917)
 texture = ExtResource("82_7ng4k")
+
+[node name="PawnRed" type="Sprite2D" parent="."]
+position = Vector2(5496, 1074)
+texture = ExtResource("82_m7ctk")
