@@ -5,3 +5,4 @@ extends CharacterBody2D
 
 func damage(amount: int) -> void:
 	health -= amount
+	print("Inimigo recebeu ", amount ," de dano. A vida total  de ", health)

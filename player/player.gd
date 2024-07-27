@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var sprite_player = $Sprite_Player
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
+@onready var sword_area : Area2D = $SwordArea
 
 @export var sword_damage : int = 2
 @export var speed : float = 3
@@ -59,6 +60,24 @@ func attack() -> void:
 	is_attacking = true
 	attack_cooldown = 0.6
 	
+func deal_damage_to_enemy() -> void:
+	var bodies = sword_area.get_overlapping_bodies()
+	for body in bodies:
+		if body.is_in_group("enemies"):
+			var enemy : Enemy = body
+			# calculate enemy direction and view
+			var direction_to_enemy = (enemy.position - position).normalized()
+			var attack_direction: Vector2
+			if sprite_player.flip_h:
+				attack_direction = Vector2.LEFT
+			else:
+				attack_direction = Vector2.RIGHT
+			var dot_product = direction_to_enemy.dot(attack_direction)
+			# enemy damage
+			if dot_product >= 0.3:
+				enemy.damage(sword_damage)
+			print("Dot: ", dot_product)
+			
 func read_input() -> void:
 # capture the keys awsd and video game controller / Project Settings > InputMap
 	input_vector = Input.get_vector("move_left","move_right", "move_up", "move_down")
