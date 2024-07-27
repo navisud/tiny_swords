@@ -331,7 +331,7 @@ position = Vector2(3942, 1137)
 texture = ExtResource("61_ttw70")
 
 [node name="Dead" type="Sprite2D" parent="."]
-position = Vector2(5554, 244)
+position = Vector2(5518, 238)
 texture = ExtResource("62_0lt7v")
 
 [node name="WarriorRed" type="Sprite2D" parent="."]

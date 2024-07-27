@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4rcjf8qtc2bi" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_eudfi"]
 [ext_resource type="PackedScene" uid="uid://db2ocnrv60lcq" path="res://player/player.tscn" id="2_yslcq"]
-[ext_resource type="PackedScene" uid="uid://b204qcrp0pta5" path="res://enemy/enemy.tscn" id="3_8md34"]
+[ext_resource type="PackedScene" uid="uid://b204qcrp0pta5" path="res://enemy/pawn.tscn" id="3_8md34"]
 
 [node name="Node2D" type="Node2D"]
 
