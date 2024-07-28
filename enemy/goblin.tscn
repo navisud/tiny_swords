@@ -60,7 +60,7 @@ radius = 33.0
 height = 74.0
 
 [node name="Goblin" type="CharacterBody2D" groups=["enemies"]]
-scale = Vector2(3.20197, 3.20197)
+scale = Vector2(3.00937, 3.00937)
 motion_mode = 1
 script = ExtResource("1_ocedh")
 health = 20
@@ -72,6 +72,7 @@ animation = &"running"
 autoplay = "running"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.76247, 0.76247)
 shape = SubResource("CapsuleShape2D_8rlav")
 
 [node name="FollowPlayer" type="Node" parent="."]

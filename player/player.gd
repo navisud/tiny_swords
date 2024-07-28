@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 @onready var sprite_player = $Sprite_Player
@@ -9,6 +10,7 @@ extends CharacterBody2D
 @export var speed : float = 3
 @export_range(0,1) var smooth : float = 0.3 
 @export var health : int = 100
+@export var max_health : int = 100
 @export var death_prefab : PackedScene
 
 var rand : int = 0
@@ -161,3 +163,17 @@ func die() -> void:
 		get_parent().add_child(death_object)
 		print("Player morreu!")
 	queue_free()
+
+func heal(amount: int) -> int:
+	health += amount
+	if health > max_health:
+		health = max_health
+	print("Player recebeu cura de ", amount ,". A vida total  de ", health,"/",max_health)
+# blink player when regenerate life
+	modulate = Color.GREEN
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN)
+	tween.set_trans(Tween.TRANS_QUINT)
+	tween.tween_property(self, "modulate", Color.WHITE, 0.5  )
+	return health
+	
