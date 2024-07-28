@@ -7,7 +7,9 @@
 [node name="TestMobSpawner" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_yrguo")]
-position = Vector2(273, 200)
+position = Vector2(582, 317)
+sword_damage = 5
+ritual_interval = 15.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
@@ -16,4 +18,4 @@ rotation_smoothing_enabled = true
 [node name="MobSpawner" parent="." instance=ExtResource("2_q5lky")]
 
 [node name="Ritual" parent="." instance=ExtResource("3_vt4a3")]
-position = Vector2(271, 196)
+position = Vector2(582, 317)
