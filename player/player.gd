@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var sword_area : Area2D = $SwordArea
 @onready var hitbox_area : Area2D = $HitboxArea
+@onready var health_bar : ProgressBar = $ProgressBar 
 
 @export_category("Sword")
 @export var sword_damage : int = 2
@@ -42,6 +43,9 @@ func _process(delta: float) -> void:
 	update_hitbox_detection(delta)
 # ritual spell
 	update_ritual(delta)
+	
+	health_bar.max_value = max_health
+	health_bar.value = health
 	
 	GameManager.player_position = position
 

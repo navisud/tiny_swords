@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw1r7h3iwuxjc"]
+
+[ext_resource type="Script" path="res://systems/game_gui.gd" id="1_pfctj"]
+[ext_resource type="Texture2D" uid="uid://cd8opmoqleb2" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_yqu1p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t50pm"]
+texture = ExtResource("2_yqu1p")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 33.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128.813, 128)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_pfctj")
+
+[node name="Timer" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 26.0
+offset_right = 28.0
+offset_bottom = 56.0
+grow_horizontal = 2
+scale = Vector2(1.31291, 1.31291)
+size_flags_horizontal = 4
+text = "05:12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -417.0
+offset_top = 35.0
+offset_right = -28.0
+offset_bottom = 146.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t50pm")
+
+[node name="Gold_Label" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 57.5
+offset_top = -28.5
+offset_right = 129.5
+offset_bottom = -5.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.18973, 1.23521)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "50k Gold"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Meat_Label" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.5
+offset_top = -32.5
+offset_right = -66.5
+offset_bottom = -5.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.36762, 1.28934)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "30 Meat"
+horizontal_alignment = 1
+vertical_alignment = 1

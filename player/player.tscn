@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://db2ocnrv60lcq"]
+[gd_scene load_steps=20 format=3 uid="uid://db2ocnrv60lcq"]
 
 [ext_resource type="Texture2D" uid="uid://b4rcjf8qtc2bi" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_l2cia"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_scawf"]
@@ -250,6 +250,12 @@ radius = 111.005
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lu3ig"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqfgk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcrvv"]
+bg_color = Color(0.788235, 0, 0.172549, 1)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_scawf")
 death_prefab = ExtResource("2_432bg")
@@ -263,6 +269,7 @@ vframes = 8
 frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_xu5yo")
 debug_color = Color(0.168308, 0.613526, 0.572899, 0.278431)
 
@@ -273,6 +280,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="SwordArea" type="Area2D" parent="."]
+visible = false
 scale = Vector2(1.05391, 1.05391)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordArea"]
@@ -280,8 +288,26 @@ shape = SubResource("CircleShape2D_48ktj")
 debug_color = Color(0.94902, 0.32549, 0.658824, 0.180392)
 
 [node name="HitboxArea" type="Area2D" parent="."]
+visible = false
 scale = Vector2(3.80763, 3.80763)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea"]
 shape = SubResource("CircleShape2D_lu3ig")
 debug_color = Color(0, 0.649444, 0.143399, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 44.0
+offset_right = 45.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_fqfgk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kcrvv")
+value = 50.0
+rounded = true
+show_percentage = false

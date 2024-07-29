@@ -1,21 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://cr0gr6g75qknn"]
+[gd_scene load_steps=5 format=3 uid="uid://cr0gr6g75qknn"]
 
 [ext_resource type="PackedScene" uid="uid://db2ocnrv60lcq" path="res://player/player.tscn" id="1_yrguo"]
 [ext_resource type="PackedScene" uid="uid://c38on4gx4tfli" path="res://systems/mob_spawner.tscn" id="2_q5lky"]
 [ext_resource type="PackedScene" uid="uid://bm15mkcexa672" path="res://events/ritual.tscn" id="3_vt4a3"]
+[ext_resource type="PackedScene" uid="uid://cwkpifbviy6rf" path="res://events/meat.tscn" id="4_0od6x"]
 
 [node name="TestMobSpawner" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_yrguo")]
 position = Vector2(582, 317)
 sword_damage = 5
+ritual_damage = 3
 ritual_interval = 15.0
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
 
 [node name="MobSpawner" parent="." instance=ExtResource("2_q5lky")]
 
 [node name="Ritual" parent="." instance=ExtResource("3_vt4a3")]
 position = Vector2(582, 317)
+
+[node name="Meat" parent="." instance=ExtResource("4_0od6x")]
+position = Vector2(973, 339)
+
+[node name="Meat2" parent="." instance=ExtResource("4_0od6x")]
+position = Vector2(801, 521)
+
+[node name="Meat3" parent="." instance=ExtResource("4_0od6x")]
+position = Vector2(332, 317)
