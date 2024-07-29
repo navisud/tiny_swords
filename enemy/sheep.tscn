@@ -56,7 +56,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8rlav"]
-radius = 14.0
+radius = 10.2525
+height = 20.505
 
 [node name="Sheep" type="CharacterBody2D" groups=["enemies"]]
 motion_mode = 1
@@ -71,8 +72,8 @@ autoplay = "running"
 frame_progress = 0.800858
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
-scale = Vector2(1.46306, 1.46306)
+position = Vector2(0, 8)
+scale = Vector2(1.15416, 1.15416)
 shape = SubResource("CapsuleShape2D_8rlav")
 
 [node name="FollowPlayer" type="Node" parent="."]

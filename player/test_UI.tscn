@@ -1,16 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvl81do2cdhkh"]
+[gd_scene load_steps=6 format=3 uid="uid://bvl81do2cdhkh"]
 
 [ext_resource type="PackedScene" uid="uid://db2ocnrv60lcq" path="res://player/player.tscn" id="1_x6g65"]
 [ext_resource type="PackedScene" uid="uid://bbpsatqykjqfw" path="res://enemy/sheep.tscn" id="3_erjxi"]
 [ext_resource type="PackedScene" uid="uid://bw1r7h3iwuxjc" path="res://systems/game_gui.tscn" id="4_4skbs"]
 [ext_resource type="PackedScene" uid="uid://uko8alimy3a1" path="res://enemy/goblin.tscn" id="4_o8jmp"]
+[ext_resource type="PackedScene" uid="uid://cwkpifbviy6rf" path="res://events/meat.tscn" id="5_rbmqw"]
 
 [node name="test_UI" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_x6g65")]
 position = Vector2(175, 104)
 sword_damage = 8
-ritual_damage = 1
+health = 10
+ritual_damage = 0
 ritual_interval = 15.0
 
 [node name="Sheep" parent="." instance=ExtResource("3_erjxi")]
@@ -26,3 +28,12 @@ position = Vector2(841, 444)
 position = Vector2(759, 694)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_4skbs")]
+
+[node name="Meat" parent="." instance=ExtResource("5_rbmqw")]
+position = Vector2(148, 292)
+
+[node name="Meat2" parent="." instance=ExtResource("5_rbmqw")]
+position = Vector2(288, 260)
+
+[node name="Meat3" parent="." instance=ExtResource("5_rbmqw")]
+position = Vector2(390, 86)

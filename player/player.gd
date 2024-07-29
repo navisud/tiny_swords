@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var sword_area : Area2D = $SwordArea
 @onready var hitbox_area : Area2D = $HitboxArea
 @onready var health_bar : ProgressBar = $ProgressBar 
+@onready var camera_2d = $Camera2D
 
 @export_category("Sword")
 @export var sword_damage : int = 2
@@ -32,21 +33,28 @@ var hitbox_cooldown : float = 0.0
 var ritual_cooldown  : float = 0.0
 var input_vector : Vector2 = Vector2(0,0)
 
+signal meat_collected(value: int)
+
+func _ready():
+	GameManager.player = self
 
 func _process(delta: float) -> void:
 # _process runs every frame per second
 	update_attack_cooldown(delta)
 	read_input()
 	play_run_idle()
+
 	if not is_attacking:
 		flip_sprite()
 	update_hitbox_detection(delta)
+
 # ritual spell
 	update_ritual(delta)
-	
+# update health bar	
 	health_bar.max_value = max_health
 	health_bar.value = health
-	
+
+# says player position for enemies
 	GameManager.player_position = position
 
 func _physics_process(delta: float) -> void:
@@ -195,6 +203,7 @@ func heal(amount: int) -> int:
 	if health > max_health:
 		health = max_health
 	print("Player recebeu cura de ", amount ,". A vida total  de ", health,"/",max_health)
+
 # blink player when regenerate life
 	modulate = Color.GREEN
 	var tween = create_tween()
