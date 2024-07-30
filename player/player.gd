@@ -20,7 +20,7 @@ extends CharacterBody2D
 @export var death_prefab : PackedScene
 
 @export_category("Ritual")
-@export var ritual_damage : int = 5
+@export var ritual_damage : int = 2
 @export var ritual_interval : float = 30
 @export var ritual_scene : PackedScene 
 
@@ -109,13 +109,23 @@ func deal_damage_to_enemy() -> void:
 			# calculate enemy direction and view
 			var direction_to_enemy = (enemy.position - position).normalized()
 			var attack_direction: Vector2
+			
 			if sprite_player.flip_h:
 				attack_direction = Vector2.LEFT
 			else:
 				attack_direction = Vector2.RIGHT
+				
+			if input_vector.y > 0:
+				attack_direction = Vector2.UP
+			elif input_vector.y < 0:
+				attack_direction = Vector2.DOWN
+				
 			var dot_product = direction_to_enemy.dot(attack_direction)
 			# enemy damage
 			if dot_product >= 0.3:
+				enemy.damage(sword_damage)
+			
+			if dot_product <= -0.1:
 				enemy.damage(sword_damage)
 			print("Dot: ", dot_product)
 			
@@ -177,7 +187,7 @@ func damage(amount: int) -> void:
 	if health <= 0: return
 	
 	health -= amount
-	print("Player recebeu ", amount ," de dano. A vida total  de ", health)
+	#print("Player recebeu ", amount ," de dano. A vida total  de ", health)
 
 # blink node
 	modulate = Color.RED

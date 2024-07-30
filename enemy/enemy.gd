@@ -18,7 +18,7 @@ func _ready():
 
 func damage(amount: int) -> void:
 	health -= amount
-	print("Inimigo recebeu ", amount ," de dano. A vida total  de ", health)
+	#print("Inimigo recebeu ", amount ," de dano. A vida total  de ", health)
 
 # damage digit
 	var dmg_dgt = dmg_digit_prefab.instantiate()

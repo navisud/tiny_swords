@@ -15,7 +15,6 @@ func _process(delta: float):
 	var time_elapsed_in_seconds : int = floori(time_elapsed)
 	var seconds : int = time_elapsed_in_seconds % 60
 	var minutes : int = time_elapsed_in_seconds / 60
-	
 	time_elapsed_string = "%02d:%02d" % [minutes, seconds]
 
 func end_game():

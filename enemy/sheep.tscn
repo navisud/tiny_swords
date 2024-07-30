@@ -81,3 +81,5 @@ shape = SubResource("CapsuleShape2D_8rlav")
 [node name="FollowPlayer" type="Node" parent="."]
 script = ExtResource("4_lblkt")
 speed = 1.0
+
+[node name="Damage_Digit_Marker" type="Marker2D" parent="."]

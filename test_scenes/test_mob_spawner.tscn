@@ -10,7 +10,7 @@
 [node name="Player" parent="." instance=ExtResource("1_yrguo")]
 position = Vector2(582, 317)
 sword_damage = 5
-ritual_damage = 3
+ritual_damage = 0
 ritual_interval = 15.0
 
 [node name="MobSpawner" parent="." instance=ExtResource("2_q5lky")]
