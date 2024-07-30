@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://b204qcrp0pta5"]
+[gd_scene load_steps=14 format=3 uid="uid://b204qcrp0pta5"]
 
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_d8abh"]
 [ext_resource type="Script" path="res://enemy/behavior/follow_player.gd" id="1_m0jao"]
 [ext_resource type="Texture2D" uid="uid://bx7gkheqhdt1r" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="1_tq0qh"]
 [ext_resource type="PackedScene" uid="uid://c1hotqcul8gau" path="res://events/skull.tscn" id="2_mfruo"]
+[ext_resource type="PackedScene" uid="uid://cwkpifbviy6rf" path="res://events/meat.tscn" id="3_y2pk6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4sryt"]
 atlas = ExtResource("1_tq0qh")
@@ -63,6 +64,7 @@ height = 45.1649
 motion_mode = 1
 script = ExtResource("1_d8abh")
 death_prefab = ExtResource("2_mfruo")
+drop_items = Array[PackedScene]([ExtResource("3_y2pk6")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_w71q1")
