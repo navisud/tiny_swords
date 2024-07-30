@@ -40,6 +40,7 @@ func damage(amount: int) -> void:
 		die()
 
 func die() -> void:
+	GameManager.monster_defeated += 1
 # skull
 	if death_prefab:
 		var death_object = death_prefab.instantiate()

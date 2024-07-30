@@ -6,7 +6,6 @@ extends CharacterBody2D
 @onready var sword_area : Area2D = $SwordArea
 @onready var hitbox_area : Area2D = $HitboxArea
 @onready var health_bar : ProgressBar = $ProgressBar 
-@onready var camera_2d = $Camera2D
 
 @export_category("Sword")
 @export var sword_damage : int = 2
@@ -191,6 +190,7 @@ func damage(amount: int) -> void:
 		die()
 
 func die() -> void:
+	GameManager.end_game()
 	if death_prefab:
 		var death_object = death_prefab.instantiate()
 		death_object.position = position

@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 @onready var timer_label : Label = %Timer
-@onready var gold_label : Label = %Gold_Label
 @onready var meat_label : Label = %Meat_Label
 
 var time_elapsed : float = 0.0
