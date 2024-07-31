@@ -1,0 +1,217 @@
+[gd_scene load_steps=12 format=3 uid="uid://c02hd2jkyq8xn"]
+
+[ext_resource type="Script" path="res://systems/buildings/house/house_knight.gd" id="1_28sgx"]
+[ext_resource type="Texture2D" uid="uid://bu17bvijl5svq" path="res://addons/Tiny Swords/Factions/Knights/Buildings/House/House_Construction.png" id="1_rttsd"]
+[ext_resource type="Texture2D" uid="uid://cq5xvu5uldnnf" path="res://addons/Tiny Swords/Factions/Knights/Buildings/House/House_Destroyed.png" id="2_6h4op"]
+[ext_resource type="Texture2D" uid="uid://cvqdnirsxi8hs" path="res://addons/Tiny Swords/Factions/Knights/Buildings/House/House_Red.png" id="3_fwa4a"]
+[ext_resource type="Texture2D" uid="uid://dblurjaorss8a" path="res://addons/Tiny Swords/Factions/Knights/Buildings/House/House_Purple.png" id="4_hdbsj"]
+[ext_resource type="Texture2D" uid="uid://bo0nfqe2dens8" path="res://addons/Tiny Swords/Factions/Knights/Buildings/House/House_Yellow.png" id="5_2qm32"]
+[ext_resource type="Texture2D" uid="uid://d0cs3wog0agg1" path="res://addons/Tiny Swords/Factions/Knights/Buildings/House/House_Blue.png" id="6_e7x42"]
+
+[sub_resource type="Animation" id="Animation_f8e37"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HouseDestroyed:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HouseConstruction:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -75)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HouseConstruction:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HouseDestroyed:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("houses_:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -75)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("houses_:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0k8op"]
+resource_name = "construction"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HouseDestroyed:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HouseConstruction:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -75)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HouseConstruction:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HouseDestroyed:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("houses_:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -75)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("houses_:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iueom"]
+_data = {
+"RESET": SubResource("Animation_f8e37"),
+"construction": SubResource("Animation_0k8op")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnslo"]
+size = Vector2(91, 68)
+
+[node name="knight_house" type="Node2D"]
+position = Vector2(556, 387)
+script = ExtResource("1_28sgx")
+
+[node name="construction" type="Node2D" parent="."]
+
+[node name="HouseConstruction" type="Sprite2D" parent="construction"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -75)
+texture = ExtResource("1_rttsd")
+
+[node name="HouseDestroyed" type="Sprite2D" parent="construction"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -75)
+texture = ExtResource("2_6h4op")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="construction"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_iueom")
+}
+autoplay = "construction"
+
+[node name="houses_" type="Node2D" parent="construction"]
+position = Vector2(0, -75)
+
+[node name="RedHouse" type="Sprite2D" parent="construction/houses_"]
+texture = ExtResource("3_fwa4a")
+
+[node name="PurpleHouse" type="Sprite2D" parent="construction/houses_"]
+visible = false
+texture = ExtResource("4_hdbsj")
+
+[node name="HouseYellow" type="Sprite2D" parent="construction/houses_"]
+visible = false
+texture = ExtResource("5_2qm32")
+
+[node name="BlueHouse" type="Sprite2D" parent="construction/houses_"]
+visible = false
+texture = ExtResource("6_e7x42")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="construction/houses_"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="construction/houses_/StaticBody2D"]
+position = Vector2(0.5, 36)
+shape = SubResource("RectangleShape2D_dnslo")
