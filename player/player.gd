@@ -53,6 +53,12 @@ func _process(delta: float) -> void:
 	health_bar.max_value = max_health
 	health_bar.value = health
 
+# lock mc 
+	if is_attacking:
+		speed = 0
+	else:
+		speed = 3
+
 # says player position for enemies
 	GameManager.player_position = position
 
